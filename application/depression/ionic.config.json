@@ -1,0 +1,14 @@
+{
+  "name": "depression",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "scss/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
