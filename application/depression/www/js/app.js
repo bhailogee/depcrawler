@@ -22,11 +22,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
+.config(function($stateProvider, $urlRouterProvider,$locationProvider,myStateConfigProvider) {
+
+   $stateProvider
 
     .state('app', {
-    url: '/app',
+    url: '/symptom',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
@@ -68,6 +69,25 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   });
+
+    var myStates = myStateConfigProvider.$get().myStates;
+
+    for(var i=0;i<myStates.length;i++)
+    {
+        $stateProvider.state(myStates[i].name,myStates[i]);
+    }
+
+    if (window.history && window.history.pushState) {
+        $locationProvider.html5Mode({
+            enabled: false,
+            requireBase: true,
+            rewriteLinks: true
+        });
+    }
+    else {
+        $locationProvider.html5Mode(false);
+    }
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/symptom/depression-1');
 });
