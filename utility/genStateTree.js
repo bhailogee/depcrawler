@@ -3,29 +3,13 @@
  */
 
 var cheerio = require("cheerio");
-var fs = require('fs');
-var path = require('path');
 
-var walkSync = function(dir,rel, filelist) {
-    var fs = fs || require('fs'),
-        files = fs.readdirSync(dir+rel);
-    filelist = filelist || [];
-    files.forEach(function(file) {
-        if (fs.statSync(dir +rel+ file).isDirectory()) {
-            filelist = walkSync(dir, rel+file + '/', filelist);
-        }
-        else {
-            filelist.push({path: rel + file, filename: file});
-        }
-    });
-    return filelist;
-};
-
+var common = require('../common/common');
 
 //var list = walkSync("D:/work/drugCrawler/",'data/');
 //console.log(path.dirname(fs.realpathSync(__filename)));
 //console.log(__dirname);
-var list = walkSync("D:/work/depcrawler/",'data/');
+var list = common.walkSync("D:/work/depcrawler/",'data/');
 var tree=[];
 
 /*for (var j = 0; j < list.length; j++) {
