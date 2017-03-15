@@ -7,11 +7,14 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 
+var htmlToJs = require('gulp-html-to-js');
+
+
 var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass','views']);
 
 gulp.task('serve:before', ['watch']);
 
@@ -50,4 +53,11 @@ gulp.task('git-check', function(done) {
     process.exit(1);
   }
   done();
+});
+
+gulp.task('views', function() {
+  debugger;
+    return gulp.src('./www/data/**/*')
+        .pipe(htmlToJs())
+        .pipe(gulp.dest('./www/js/'));
 });

@@ -4,6 +4,8 @@
 angular.module('starter')
     .service('myStateConfig',function() {
 
+
+
         this.myStates = [
             {
                 "url": "/depression-1",
@@ -114,4 +116,15 @@ angular.module('starter')
                 "name": "app.depression-9",
                 "views": {"menuContent": {"templateUrl": "data/man/depression/depression-9.html"}}
             }];
+
+
+        this.myStates.forEach(function(s){
+            s.controller =function(){
+
+            };
+            s.link=function(scope,elem,attr){
+                iView = angular.element('<ion-view>');
+                iView.html(elem);
+            }
+        })
     });
