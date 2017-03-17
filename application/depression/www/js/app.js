@@ -22,7 +22,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider,$locationProvider,myStateConfigProvider) {
+.config(function($stateProvider, $urlRouterProvider,$locationProvider,myStateConfigProvider,$ionicConfigProvider) {
+    $ionicConfigProvider.views.maxCache(10);
+    $ionicConfigProvider.views.forwardCache(true);
+    $ionicConfigProvider.scrolling.jsScrolling(false);
+    $ionicConfigProvider.tabs.style("striped");
+    $ionicConfigProvider.tabs.position("bottom");
 
    $stateProvider
 

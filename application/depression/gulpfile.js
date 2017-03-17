@@ -57,7 +57,7 @@ gulp.task('git-check', function(done) {
 
 gulp.task('views', function() {
   debugger;
-    return gulp.src('./www/data/**/*')
-        .pipe(htmlToJs())
+    return gulp.src('./www/data/**/*.html')
+        .pipe(htmlToJs({concat:"templates.js"}))
         .pipe(gulp.dest('./www/js/'));
 });

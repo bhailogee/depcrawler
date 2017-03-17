@@ -17,8 +17,22 @@
 
     </ion-nav-bar>
 
+    <ion-tabs class="tabs-positive tabs-icon-top">
 
-      <ion-nav-view name="menuContent"></ion-nav-view>
+      <ion-tab title="Home" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+        <ion-nav-view name="menuContent2"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Depression" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+        <ion-nav-view name="menuContent"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+        <ion-nav-view name="menuContent3"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
 
 
   </ion-side-menu-content>
