@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "171632211947",
+    "firebase_url": "https://diagnose-symptoms.firebaseio.com",
+    "project_id": "diagnose-symptoms",
+    "storage_bucket": "diagnose-symptoms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171632211947:android:8a24c32539593f50",
+        "android_client_info": {
+          "package_name": "symptoms.faroshgah.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171632211947-8cutvhgls9bn7pnggo71bbavf6pcoq1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyyxHEgJC10uZJxn4ACSUTP1OxMQ7lqK4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
