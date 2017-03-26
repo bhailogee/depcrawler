@@ -21,7 +21,7 @@ var walkSync = function(dir,rel, filelist) {
 };
 
 
-var list = walkSync("E:/homework/drugCrawler/",'data/');
+var list = walkSync("E:/homework/depcrawler/",'data/');
 var tree=[];
 
 for(var i=0;i<list.length;i++) {
