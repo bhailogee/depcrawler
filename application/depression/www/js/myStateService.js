@@ -7,7 +7,7 @@ angular.module('starter')
 
       this.myStates=[];
       this.statesDef=[
-          {name:"depression",count:43,view:"menuContent"},
+          {name:"depression",count:42,view:"menuContent"},
           {name:"anxiety",count:37,view:"menuContent3"}
       ];
 
@@ -15,7 +15,7 @@ angular.module('starter')
       for(var jj=0;jj<this.statesDef.length;jj++)
       {
           var stateDef = this.statesDef[jj];
-          for(var i=0;i<stateDef.count;i++) {
+          for(var i=1;i<=stateDef.count;i++) {
 
               var s =
               {
@@ -26,17 +26,7 @@ angular.module('starter')
               s.views=s.views||{};
               s.views[stateDef['view']]=s.views[stateDef['view']]||{};
 
-              s.views[stateDef['view']].templateProvider = function () {
-
-                  var template=templates[s.name.split('.')[1]];
-
-                  return '<ion-view view-title="Playlist">' +
-                      '<ion-content>' +
-                      '<div class="card"><div class="item item-text-wrap">' +template+
-                      '</div></div>' +
-                      '</ion-content>' +
-                      '</ion-view>';
-              }
+              s.views[stateDef['view']].templateProvider = templateProvider.bind(s,templates);
               this.myStates.push(s);
           }
       }
@@ -44,3 +34,13 @@ angular.module('starter')
 
 
     }]);
+
+function templateProvider(templates) {
+  var template = templates[this.name.split('.')[1]];
+  return '<ion-view view-title="Playlist">' +
+    '<ion-content>' +
+    '<div class="card"><div class="item item-text-wrap">' + template +
+    '</div></div>' +
+    '</ion-content>' +
+    '</ion-view>';
+}
