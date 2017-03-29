@@ -13,13 +13,10 @@ angular.module('starter', ['ionic', 'starter.controllers','login','store'])
 
 
         // Set AdMobAds options:
-        /*admob.setOptions({
-            publisherId: "pub-9472962611766334",  // Required
-            interstitialAdId: "ca-app-pub-9472962611766334/7348189603",  // Optional
-            tappxIdiOS: "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
-            tappxIdAndroid: "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
-            tappxShare: 0.5                                        // Optional
-        });*/
+        admob.setoptions({
+            publisherid: "pub-9472962611766334",  // required
+            interstitialadid: "ca-app-pub-9472962611766334/7348189603"
+        });
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
