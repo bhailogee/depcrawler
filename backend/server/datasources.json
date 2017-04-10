@@ -1,0 +1,11 @@
+{
+  "dbConditions": {
+    "host": "35.190.137.214",
+    "port": 3306,
+    "database": "conditions",
+    "password": "root",
+    "name": "dbConditions",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

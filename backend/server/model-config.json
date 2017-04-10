@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Brand": {
+    "dataSource": "dbConditions",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Forconsumer": {
+    "dataSource": "dbConditions",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Drugclass": {
+    "dataSource": "dbConditions",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Forprofessionals": {
+    "dataSource": "dbConditions",
+    "public": true
+  },
+  "Condition": {
+    "dataSource": "dbConditions",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Medication": {
+    "dataSource": "dbConditions",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  }
+}

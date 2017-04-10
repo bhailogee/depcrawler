@@ -1,0 +1,205 @@
+{
+  "name": "Medication",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mysql": {
+    "schema": "conditions",
+    "table": "medication"
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": true,
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "conditionid": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "conditionId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "drugname": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "drugName",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "drugnameurl": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "drugNameurl",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "pregnancy": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "pregnancy",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "csa": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "csa",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "alcohol": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "alcohol",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "genericname": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "genericName",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "drugclass": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "drugClass",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "drugclassurl": {
+      "type": "String",
+      "required": false,
+      "length": 999,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "drugClassurl",
+        "dataType": "varchar",
+        "dataLength": 999,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brands": {
+      "type": "hasMany",
+      "model": "Brand",
+      "foreignKey": ""
+    },
+    "drugclasses": {
+      "type": "hasMany",
+      "model": "Drugclass",
+      "foreignKey": ""
+    },
+    "forconsumers": {
+      "type": "hasMany",
+      "model": "Forconsumer",
+      "foreignKey": ""
+    },
+    "forprofessionals": {
+      "type": "hasMany",
+      "model": "Forprofessionals",
+      "foreignKey": ""
+    },
+    "condition": {
+      "type": "belongsTo",
+      "model": "Condition",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
